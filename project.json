@@ -1,0 +1,7 @@
+{
+    "name": "alexa",
+    "description": "I am a parrot.",
+    "memory": 128,
+    "timeout": 5,
+    "role": "arn:aws:iam::673456705144:role/service-role/alexa-parrot"
+  }

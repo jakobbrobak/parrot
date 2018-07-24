@@ -54,4 +54,29 @@ describe('Parrot', () => {
   it("works", function() {
 
   });
+
+  it('responds to a repeat event', () => request(server)
+.post('/parrot')
+.send({
+  request: {
+    type: 'IntentRequest',
+    intent: {
+      name: 'RepeatIntent',
+      slots: {
+        VALUE: {
+          name: 'VALUE',
+          value: '2'
+        }
+      }
+    }
+  }
+})
+.expect(200)
+.then((response) => {
+  const { ssml } = response.body.response.outputSpeech;
+
+  return expect(ssml).to.eql('<speak>You said 2. I repeat, you said 2. I repeat, you said 2.</speak>');
+}));
+
+  
 }); 
