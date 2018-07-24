@@ -1,0 +1,14 @@
+{
+  "name": "parrot",
+  "version": "1.0.0",
+  "description": "Alexa parroting skill",
+  "main": "parrot.js",
+  "dependencies": {
+    "alexa-app": "^4.2.2"
+  },
+  "author": "Daniel Doubrovkine (db@artsy.net)",
+  "license": "MIT",
+  "engines": {
+    "node": ">=8.0.0"
+  }
+}
